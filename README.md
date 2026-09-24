@@ -1,150 +1,72 @@
-🏀 NBA Gallery
+# 🏀 NBA Gallery
 
-Uma aplicação web desenvolvida com React para praticar conceitos fundamentais de desenvolvimento Front-end, como componentização, reutilização de componentes, props, estado, renderização de listas e estilização com CSS Modules.
+Uma aplicação web desenvolvida com **React** para praticar conceitos fundamentais de desenvolvimento Front-end, como **componentização, reutilização de componentes, props, estado, renderização de listas e CSS Modules**.
 
+O projeto apresenta uma galeria de jogadores da NBA em uma interface simples e responsiva, servindo também como exemplo prático de organização de componentes em uma aplicação React.
 
+[![React](https://img.shields.io/badge/React-18.x-61DAFB?style=flat&logo=react&logoColor=white)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![CSS Modules](https://img.shields.io/badge/CSS%20Modules-000000?style=flat&logo=css3&logoColor=white)](https://github.com/css-modules/css-modules)
 
+---
 
+## 📖 Sobre o Projeto
 
-📌 Sobre o projeto
+O **NBA Gallery** foi desenvolvido como um projeto prático e didático para explorar os principais conceitos de **React**.
 
-O NBA Gallery é um projeto prático e didático criado para explorar os principais fundamentos do React por meio de uma interface inspirada no universo da NBA.
+A aplicação utiliza componentes reutilizáveis para estruturar a interface e dados dinâmicos para gerar os cards dos jogadores.
 
-A aplicação utiliza componentes reutilizáveis para organizar a interface e renderiza informações de jogadores de forma dinâmica a partir de dados definidos no projeto.
+### 🎯 Conceitos praticados
 
-🎯 Conceitos praticados
+- **Componentização** com componentes funcionais.
+- **Reutilização de componentes** por meio de `<Header />` e `<Card />`.
+- **Props** para comunicação entre componentes.
+- **`useState`** para gerenciamento de estado.
+- **Renderização dinâmica** de listas utilizando `.map()`.
+- **CSS Modules** para isolamento e organização dos estilos.
+- **CSS Grid e Flexbox** para construção do layout.
+- **Organização de arquivos e componentes** em uma aplicação React.
 
-Durante o desenvolvimento, são trabalhados conceitos como:
+---
 
-🧩 Componentização — criação de componentes reutilizáveis, como Header e Card.
+## ✨ Funcionalidades
 
-🔄 Renderização dinâmica — utilização do .map() para gerar elementos a partir de uma lista de dados.
+- 🏀 Exibição de jogadores da NBA em formato de cards.
+- 🧩 Componentes reutilizáveis e independentes.
+- 🔄 Renderização dinâmica dos dados.
+- 🎨 Estilos encapsulados com CSS Modules.
+- 📱 Layout organizado e adaptável a diferentes tamanhos de tela.
 
-📦 Props — passagem de informações entre componentes pai e filho.
+---
 
-🎛️ Estado — utilização do useState para gerenciamento de dados no componente.
+## 🛠️ Tecnologias
 
-🎨 CSS Modules — estilização isolada para evitar conflitos entre componentes.
+| Tecnologia | Utilização |
+|---|---|
+| **React** | Construção da interface e criação dos componentes |
+| **Vite** | Ambiente de desenvolvimento e build da aplicação |
+| **CSS Modules** | Estilização com escopo isolado por componente |
+| **JavaScript** | Lógica, manipulação de dados e interatividade |
+| **CSS Grid / Flexbox** | Estrutura e organização do layout |
 
-📐 CSS Grid e Flexbox — construção de layouts responsivos e organizados.
+---
 
-♻️ Reutilização de código — criação de componentes com responsabilidades bem definidas.
+## 📂 Estrutura do Projeto
 
-🛠️ Tecnologias utilizadas
-Tecnologia	Descrição
-React	Biblioteca para construção de interfaces de usuário
-Vite	Ferramenta de desenvolvimento e build para aplicações web
-CSS Modules	Sistema de estilização com escopo local por componente
-JavaScript	Linguagem utilizada para lógica e comportamento da aplicação
-📁 Estrutura do projeto
+```text
 src/
 ├── assets/
-│   └── # Imagens e outros recursos estáticos
+│   └── ...                  # Imagens e recursos estáticos
 │
 ├── components/
 │   ├── Card/
-│   │   ├── Card.jsx
-│   │   └── Card.module.css
+│   │   ├── Card.jsx         # Componente responsável pelo card do jogador
+│   │   └── Card.module.css  # Estilos encapsulados do Card
 │   │
 │   └── Header/
-│       ├── Header.jsx
-│       └── Header.module.css
+│       ├── Header.jsx       # Componente do cabeçalho
+│       └── Header.module.css# Estilos encapsulados do Header
 │
-├── App.jsx
-├── App.module.css
-└── main.jsx
-
-🧱 Principais arquivos
-
-App.jsx
-Componente principal responsável por organizar e integrar os componentes da aplicação.
-
-App.module.css
-Contém os estilos relacionados ao layout principal da aplicação.
-
-Header.jsx
-Componente responsável pela estrutura do cabeçalho.
-
-Header.module.css
-Estilos específicos do componente Header.
-
-Card.jsx
-Componente reutilizável responsável pela apresentação das informações de cada jogador.
-
-Card.module.css
-Estilos específicos do componente Card.
-
-main.jsx
-Ponto de entrada da aplicação React.
-
-🚀 Como executar o projeto
-Pré-requisitos
-
-Antes de começar, você precisa ter instalado:
-
-Node.js
-
-npm ou outro gerenciador de pacotes compatível
-
-1. Clone o repositório
-git clone <URL_DO_REPOSITORIO>
-
-2. Acesse a pasta do projeto
-cd nba-gallery
-
-3. Instale as dependências
-npm install
-
-4. Inicie o servidor de desenvolvimento
-npm run dev
-
-
-Depois, acesse a URL exibida no terminal para visualizar a aplicação no navegador.
-
-📜 Scripts disponíveis
-Comando	Descrição
-npm run dev	Inicia o servidor de desenvolvimento
-npm run build	Gera a versão de produção
-npm run preview	Executa uma prévia da build de produção
-💡 Exemplo de componentização
-
-Um dos objetivos do projeto é separar responsabilidades em componentes reutilizáveis.
-
-Por exemplo, o componente Card pode receber informações por meio de props:
-
-<Card
-  name="LeBron James"
-  team="Los Angeles Lakers"
-  image={playerImage}
-/>
-
-
-Dessa forma, o mesmo componente pode ser utilizado para representar diferentes jogadores sem precisar duplicar a estrutura HTML.
-
-📚 Objetivo educacional
-
-O projeto foi desenvolvido como uma atividade prática para consolidar conhecimentos essenciais de React e servir como base para projetos futuros.
-
-A partir deste projeto, é possível evoluir a aplicação adicionando funcionalidades como:
-
-🔎 Busca por jogadores
-
-🏀 Filtro por equipe
-
-📊 Estatísticas dos jogadores
-
-❤️ Sistema de favoritos
-
-🌙 Tema claro/escuro
-
-📱 Melhorias de responsividade
-
-🔌 Integração com uma API externa
-
-👨‍💻 Desenvolvido para estudos
-
-Projeto desenvolvido com foco em aprendizado e prática de React, componentização e desenvolvimento de interfaces modernas.
-
-📄 Licença
-
-Este projeto pode ser utilizado para fins de estudo e aprendizado.
+├── App.jsx                  # Componente principal da aplicação
+├── App.module.css           # Estilos do layout principal
+└── main.jsx                 # Ponto de entrada da aplicação React
